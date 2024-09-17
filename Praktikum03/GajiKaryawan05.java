@@ -3,10 +3,10 @@ public class GajiKaryawan05 {
     
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double gajiBulanan, upahPerjam, bonus, totalGajiKaryawan, pajak, gajiBonus;
+        double gajiBulanan, upahPerjam, presentaseBonus, totalGajiKaryawan, pajak, gajiBonus, totalSebelumPajak, gajiBersih;
         int jumlahJamKerja;
 
-        bonus = 0.1;
+        presentaseBonus = 0.1;
         pajak = 0.05;
 
         System.out.print("Masukkan jumlah jam kerja: ");
@@ -14,16 +14,21 @@ public class GajiKaryawan05 {
         System.out.print("Masukkan upah per jam: ");
         upahPerjam = sc.nextDouble();
 
-        totalGajiKaryawan = jumlahJamKerja * upahPerjam;
-
+        totalGajiKaryawan = jumlahJamKerja * upahPerjam * 25;
         System.out.println("Gaji karyawan: " + totalGajiKaryawan);
 
-        gajiBonus = totalGajiKaryawan * bonus;
+        gajiBonus = totalGajiKaryawan * presentaseBonus;
+        System.out.println("Bonus: " + gajiBonus);
 
-        System.out.println("Gaji bonus: " + gajiBonus);
+        totalSebelumPajak = gajiBonus + totalGajiKaryawan;
+        System.out.println("Gaji sebelum pajak: " + totalSebelumPajak);
 
-        gajiBulanan = gajiBonus * pajak;
+        gajiBulanan = totalSebelumPajak * pajak;
+        System.out.println("Pajak: " + gajiBulanan);
 
-        System.out.println("Gaji karyawan bulanan: " + gajiBulanan);
+        gajiBersih = totalSebelumPajak - gajiBulanan;
+        System.out.println("Gaji karyawan bulanan: " + gajiBersih);
+
+        sc.close();
     }
 }

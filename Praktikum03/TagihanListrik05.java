@@ -3,7 +3,7 @@ public class TagihanListrik05 {
     
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double tagihanListrik, kWh, penggunaanListrik, tarifListrik, listrikLebih;
+        double tagihanListrik, kWh, penggunaanListrik, tarifListrik;
 
         tarifListrik = 1500;
         penggunaanListrik = 500;
@@ -11,11 +11,12 @@ public class TagihanListrik05 {
         System.out.println("Tarif listrik: " + tarifListrik);
 
         
-        System.out.print("Masukkan penggunaan listrik x: ");
+        System.out.print("Masukkan penggunaan listrik: ");
         kWh = sc.nextDouble();
         System.out.println(kWh >= penggunaanListrik);
         tagihanListrik = kWh * tarifListrik;
-        System.out.println("tagihanListrik: " + tagihanListrik);
-
+        System.out.println("tagihan listrik: " + tagihanListrik);
+        
+        sc.close();
     }
 }

@@ -13,5 +13,6 @@ public class Segitiga05 {
       luas = alas * tinggi / 2;
       System.out.println("Luas segitiga: " + luas);
 
+      sc.close();
     }
 }
