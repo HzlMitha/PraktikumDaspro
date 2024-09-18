@@ -11,9 +11,9 @@ public class TagihanListrik05 {
         System.out.println("Tarif listrik: " + tarifListrik);
 
         
-        System.out.print("Masukkan penggunaan listrik: ");
+        System.out.print("Masukkan penggunaan listrik (kWh): ");
         kWh = sc.nextDouble();
-        System.out.println(kWh >= penggunaanListrik);
+        System.out.println("Apakah penggunaan listrik lebih dari 500kWh: " + (kWh >= penggunaanListrik));
         tagihanListrik = kWh * tarifListrik;
         System.out.println("tagihan listrik: " + tagihanListrik);
         
