@@ -5,29 +5,17 @@ public class PemilihanHariDenganIf05 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int number;
-        String dayType;
+        int dayNumber;
 
-        System.out.print("Input number: ");
-        number = sc.nextInt();
+        System.out.print("Input day number: ");
+        dayNumber = sc.nextInt();
     
-        switch (number) {
-            case 1:
-            case 2:
-            case 3:
-            case 4:
-            case 5:
-                dayType = "weekday";
-                break;
-            case 6:
-            case 7:
-                dayType = "weekend";
-                break;
-            default:
-                dayType = "invalid Number";
-    
+        if (dayNumber >= 1 && dayNumber <= 5) {
+            System.out.println(dayNumber + " adalah Weekday ");
         }
-        System.out.println(number + " is a " + dayType);
+        else if (dayNumber >= 6 && dayNumber <= 7){
+            System.out.println(dayNumber + " adalah Weekend ");
+        }
        
     }
 }
