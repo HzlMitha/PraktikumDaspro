@@ -16,6 +16,9 @@ public class PemilihanHariDenganIf05 {
         else if (dayNumber >= 6 && dayNumber <= 7){
             System.out.println(dayNumber + " adalah Weekend ");
         }
+        else {
+            System.out.println("Invalid number");
+        }
        
     }
 }
