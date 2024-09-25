@@ -12,11 +12,11 @@ public class ContohOperator {
     System.out.println(x < z);
     System.out.println(y == x);
     System.out.println(y <= x);
-    System.out.println(y <= x && x <z || y == x);
+    System.out.println(y <= x && x < z || y == x);
 
     int i = z ^ x;
     System.out.println("Nilai i adalah " + i);
-
+     
     i %= 4;
     System.out.println("Nilai i yang baru adalah " + i);
     }
