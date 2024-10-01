@@ -2,7 +2,7 @@ package Praktikum05;
 import java.util.Scanner;
 
 public class Kafe05 {
-    
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -46,12 +46,16 @@ public class Kafe05 {
             case 'L':
                 totalHarga += 0.4 * totalHarga;
                 break;
+            default:
+                System.out.println("Ukuran cup tidak valid");
+                sc.close();
+                return;
         }
         
         diskon = keanggotaan ? 0 : 0.1;
         nominalBayar = totalHarga - (diskon * totalHarga);
 
-        System.out.println("Item pembelian: " + jumlah + " " + menu + "dengan ukuran cup " + ukuranCup);
+        System.out.println("Item pembelian: " + jumlah + " " + menu + " dengan ukuran cup " + ukuranCup);
         System.out.println("Nominal bayar: " + nominalBayar);
         
      }    
