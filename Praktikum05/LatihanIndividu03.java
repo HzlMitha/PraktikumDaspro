@@ -30,6 +30,6 @@ public class LatihanIndividu03 {
         }
         totalBiaya = biayaParkir * berapaJam;
         System.out.println("Total biaya parkir: " + jenisKendaraan + " selama " + berapaJam + " jam adalah " + totalBiaya);
-    
+        sc.close();
     }
 }

@@ -25,5 +25,6 @@ public class LatihanIndividu04 {
         else {
             System.out.println("usia tidak valid");
         }
+        sc.close();
     }
 }

@@ -12,5 +12,6 @@ public class PemilihanBilangan05 {
         String hasil;
         hasil = (angka % 2 == 0) ? " termasuk bilangan genap" : " termasuk bilangan ganjil";
         System.out.println(angka + " adalah " + hasil);
+        sc.close();
     }
 }
