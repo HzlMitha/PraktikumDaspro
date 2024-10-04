@@ -2,12 +2,13 @@ package Praktikum06;
 import java.util.Scanner;
 
 public class Pemilihan2Percobaan205 {
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
       int pilihanMenu, harga;
       String member;
-      double jumlah_beli, total_bayar, diskon;
+      double total_bayar, diskon;
       
       System.out.println("-------------------------");
       System.out.println("===== MENU KAFE JTI =====");
@@ -72,5 +73,6 @@ public class Pemilihan2Percobaan205 {
             System.out.println("Member tidak valid");
         }
         System.out.println("---------------------------------------");
+        sc.close();
     }
 }
