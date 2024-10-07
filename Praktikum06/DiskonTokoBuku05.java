@@ -7,46 +7,51 @@ public class DiskonTokoBuku05 {
 
         String hari, jenisBuku;
         int jumlahBuku;
-        double diskon;
+        double diskon, totalDiskon;
 
         System.out.print("Masukkan hari: ");
         hari = sc05.nextLine();
 
-        System.out.print("Masukkan jenis buku (kamus/novel): ");
+        System.out.println("-------------------------");
+        System.out.println("===== TOKO BUKU =====");
+        System.out.println("-------------------------");
+        System.out.println("1. kamus");
+        System.out.println("2. novel");
+        System.out.println("3. lainnya");
+        System.out.println("--------------------------------------");
+
+        System.out.print("Masukkan jenis buku (kamus/novel/lainnya): ");
         jenisBuku = sc05.nextLine();
 
         System.out.print("Masukkan jumlah buku: ");
         jumlahBuku = sc05.nextInt();
 
+        diskon = 0.0;
         if (hari.equalsIgnoreCase("Rabu")) {
             if (jenisBuku.equals("kamus")){
-                diskon = 0.1;
-                System.out.println("Anda mendapatkan total diskon " + diskon);
-            
-            } else if (jumlahBuku > 2) {
-                diskon = 0.12;
-                System.out.println("Anda mendapatkan total diskon " + diskon);
-            } else {
-                diskon = 0.1;
-                System.out.println("Anda mendapatkan total diskon " + diskon);
+                diskon = 10;
+                if (jumlahBuku > 2) {
+                    diskon += 2;
+                }
+            } else if (jenisBuku.equals("novel")) {
+                diskon = 7;
+                if (jumlahBuku > 3) {
+                    diskon += 2;
+                } else {
+                    diskon += 1;
+                }
+            } else if (jumlahBuku > 3) {
+                diskon = 5;
             }
-        } else if (jenisBuku.equals("novel")) {
-            diskon = 0.7;
-            if (jumlahBuku > 3) {
-                diskon = 0.9;
-                System.out.println("Anda mendapatkan total diskon " + diskon);
-            } else {
-                diskon = 0.6;
-                System.out.println("Anda mendapatkan total diskon " + diskon);
-            }
-        } else if (jumlahBuku > 3) {
-            diskon = 0.5;
-            System.out.println("Anda mendapatkan total diskon " + diskon);
-
+    
         } else {
             System.out.println("Anda tidak mendapatkan diskon");
             return;
         }
+        totalDiskon = diskon * 100;
+        System.out.println("Anda mendapatkan total diskon " + String.format("%.2f", totalDiskon) 
+        
+        + " % ");
         
         sc05.close();
     }
