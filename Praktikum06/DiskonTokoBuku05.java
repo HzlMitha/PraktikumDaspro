@@ -29,21 +29,20 @@ public class DiskonTokoBuku05 {
         diskon = 0.0;
         if (hari.equalsIgnoreCase("Rabu")) {
             if (jenisBuku.equalsIgnoreCase("kamus")){
-                diskon = 10;
+                diskon = 0.1;
                 if (jumlahBuku > 2) {
-                    diskon += 2;
+                    diskon += 0.02;
                 }
             } else if (jenisBuku.equalsIgnoreCase("novel")) {
-                diskon = 7;
+                diskon = 0.07;
                 if (jumlahBuku > 3) {
-                    diskon += 2;
+                    diskon += 0.02;
                 } else {
-                    diskon += 1;
+                    diskon += 0.01;
                 }
             } else if (jumlahBuku > 3) {
-                diskon = 5;
+                diskon = 0.05;
             }
-    
         } else {
             System.out.println("Anda tidak mendapatkan diskon");
             return;
