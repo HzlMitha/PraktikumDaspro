@@ -28,12 +28,12 @@ public class DiskonTokoBuku05 {
 
         diskon = 0.0;
         if (hari.equalsIgnoreCase("Rabu")) {
-            if (jenisBuku.equals("kamus")){
+            if (jenisBuku.equalsIgnoreCase("kamus")){
                 diskon = 10;
                 if (jumlahBuku > 2) {
                     diskon += 2;
                 }
-            } else if (jenisBuku.equals("novel")) {
+            } else if (jenisBuku.equalsIgnoreCase("novel")) {
                 diskon = 7;
                 if (jumlahBuku > 3) {
                     diskon += 2;
