@@ -45,7 +45,9 @@ public class DiskonTokoBuku05 {
             }
         } else {
             System.out.println("Anda tidak mendapatkan diskon");
+            sc05.close();
             return;
+            
         }
         totalDiskon = diskon * 100;
         System.out.println("Anda mendapatkan total diskon " + String.format("%.2f", totalDiskon)   
