@@ -22,5 +22,7 @@ public class Percobaan1TanpaLogika05 {
         } else {
             System.out.println("Bukan tahun kabisat");
         }
+
+        sc05.close();;
     }
 }
