@@ -30,6 +30,7 @@ public class Bilangan3buah05 {
                 }
         } else {
                 System.out.println("Masukkan bilangan yang benar");
+                sc.close();
                 return;
         }
         sc.close();
