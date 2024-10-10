@@ -51,7 +51,7 @@ public class Pemilihan2Percobaan205 {
         }
 
 
-        else if (member.equals("n")) {
+        else if (member.equalsIgnoreCase("n")) {
             diskon = 0;
             if (pilihanMenu == 1) {
                 harga = 14000;
