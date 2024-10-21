@@ -23,8 +23,11 @@ public class SiakadFor05 {
                 mahasiswaTidakLulus++;
             }
         } 
+
         System.out.println("Nilai tertinggi: " + tertinggi);
         System.out.println("Nilai terendah: " + terendah);
+        System.out.println("Jumlah mahasiswa lulus: " + mahasiswaLulus);
+        System.out.println("Jumlah mahasiswa tidak lulus: " + mahasiswaTidakLulus);
 
     }
 }
