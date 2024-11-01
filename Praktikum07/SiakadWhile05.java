@@ -37,5 +37,7 @@ public class SiakadWhile05 {
             }
             i++;
         }
+
+        sc05.close();
     }
 }

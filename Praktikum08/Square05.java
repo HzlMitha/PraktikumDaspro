@@ -17,5 +17,7 @@ public class Square05 {
         System.out.println();
 
         }
+
+        sc05.close();
     }
 }

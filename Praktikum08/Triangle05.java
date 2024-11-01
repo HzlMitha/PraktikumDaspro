@@ -19,5 +19,7 @@ public class Triangle05 {
             System.out.println();
             i++;
         }
+
+        sc05.close();
     }
 }
