@@ -7,7 +7,7 @@ public class BiayaParkir05 {
         int jenis, durasi = 0, total = 0;
 
         do {
-            System.out.print("masukkan jenis kendaraan (1 mobil, 2 motor, 0 keluar): ");
+            System.out.print("masukkan jenis kendaraan (1: mobil, 2: motor, 0: keluar): ");
             jenis = sc05.nextInt();
 
             if (jenis == 1 || jenis == 2) {
