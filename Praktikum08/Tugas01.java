@@ -4,8 +4,7 @@ import java.util.Scanner;
 public class Tugas01 {
     public static void main(String[] args) {
         Scanner sc05 = new Scanner(System.in);
-
-
+        
         System.out.print("Masukkan nilai N = ");
         int N = sc05.nextInt();
 
@@ -26,9 +25,7 @@ public class Tugas01 {
                 }
             }
             System.out.println();
-
         }
-     
         sc05.close();
     }
 }
