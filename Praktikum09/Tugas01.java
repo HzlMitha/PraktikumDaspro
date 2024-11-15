@@ -18,7 +18,8 @@ public class Tugas01 {
         System.out.println("5.Teh tarik       Rp 13000");
         System.out.println("6.Cappucino       Rp 18000");
         System.out.println("7.Chocolate ice   Rp 20000");
-        
+
+        System.out.println();
         System.out.print("Masukkan jumlah menu yang akan dipesan: ");
         int jumlahMenu = sc05.nextInt();
         sc05.nextLine();
@@ -28,7 +29,7 @@ public class Tugas01 {
         int[] jumlahItemPesanan = new int[jumlahMenu];
 
         for (int i = 0; i < jumlahMenu; i++) {
-            System.out.print("Masukkan menu" + (i+1) + " : ");
+            System.out.print("Masukkan menu " + (i+1) + " : ");
             String pilihanMenu = sc05.nextLine();
 
             int indexMenu = -1;
@@ -38,6 +39,7 @@ public class Tugas01 {
                     break;
                 }
             } if (indexMenu != -1) {
+                System.out.println();
                 System.out.print("Masukkan jumlah pesanan untuk " + pilihanMenu + " : ");
                 int jumlah = sc05.nextInt();
                 sc05.nextLine();
