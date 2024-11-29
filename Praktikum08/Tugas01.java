@@ -15,11 +15,11 @@ public class Tugas01 {
         }
 
         //outer loop
-        for (int i = 0; i < N; i++) {
+        for (int i = 1; i <= N; i++) {
             //inner loop
-            for (int j = 0; j < N; j++) {
+            for (int j = 1; j <= N; j++) {
 
-                if (i == 0 || i == N-1 || j == 0 || j == N-1) {
+                if (i == 1 || i == N || j == 1 || j == N) {
                     System.out.print(N + " ");
                 } else {
                     System.out.print("  ");
