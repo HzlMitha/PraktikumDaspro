@@ -5,28 +5,33 @@ public class TugasCafe05 {
 
     static String[] menu = {"Kopi", "Teh", "Es Degan", "Roti Bakar", "Gorengan"};
     static String[] hari = {"Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"};
-    static int[] totalPenjualanPerMenu = new int[menu.length];
 
     public static void main(String[] args) {
+        Scanner sc05 = new Scanner(System.in);
+
+        System.out.print("Masukkan jumlah menu: ");
+        int jumlahMenu = sc05.nextInt();
+        System.out.print("Masukkan jumlah hari: ");
+        int jumlahHari = sc05.nextInt();
+
 
         //input data penjualanan setiap minggu
-        int[][] dataPenjualan = inputDataPenjualan();
+        int[][] dataPenjualan = inputDataPenjualan(jumlahMenu, jumlahHari, sc05);
 
         //Menampilkan data penjualanan
-        tampilanDataPenjualan(dataPenjualan);
+        tampilanDataPenjualan(dataPenjualan, jumlahMenu, jumlahHari);
 
         //Menampilkan menu dengan penjualanan tertinggi
-        cariMenuTerlaris(dataPenjualan);
+        cariMenuTerlaris(dataPenjualan, jumlahMenu, jumlahHari);
 
         //Menampilkan rata-rata penjualan untuk setiap menu
-        rataRataPenjualan(dataPenjualan);
+        rataRataPenjualan(dataPenjualan, jumlahMenu, jumlahHari);
         
         
     }
 
     //Fungsi input data penjualanan
-    public static int[][] inputDataPenjualan() {
-        Scanner sc05 = new Scanner(System.in);
+    public static int[][] inputDataPenjualan(int jumlahMenu, int jumlahHari, Scanner sc05) {
 
         int[][] penjualan = new int[menu.length][hari.length];
         System.out.println("Data penjualan seluruh Menu: ");
@@ -44,7 +49,7 @@ public class TugasCafe05 {
     }
 
     //Fungsi untuk menampilkan seluruh data penjualan
-    public static void tampilanDataPenjualan(int[][] dataPenjualan) {
+    public static void tampilanDataPenjualan(int[][] dataPenjualan, int jumlahMenu, int jumlahHari) {
         System.out.println();
         System.out.println("==== Data penjualan untuk setiap menu selama 1 minggu ====");
         for (int i = 0; i < menu.length; i++){
@@ -57,8 +62,8 @@ public class TugasCafe05 {
         }
     }
 
-    //Fungsi untuk menampilkan total penjualanan setiap menu
-    public static void cariMenuTerlaris(int[][] dataPenjualan) {
+    //Fungsi untuk menampilkan menu terlaris 
+    public static void cariMenuTerlaris(int[][] dataPenjualan, int jumlahMenu, int jumlahHari) {
         
         System.out.println();
         System.out.println("==== Menu dengan Penjualan Tertinggi ====");
@@ -85,7 +90,7 @@ public class TugasCafe05 {
     }
 
     //Menampilkan rata-rata penjualan setiap menu
-    public static void rataRataPenjualan(int[][] dataPenjualan) {
+    public static void rataRataPenjualan(int[][] dataPenjualan, int jumlahHari, int jumlahMenu) {
         System.out.println();
         System.out.println("==== Rata- Rata Penjualan setiap Menu ====");
         for (int i = 0; i < menu.length; i++) {
@@ -94,7 +99,7 @@ public class TugasCafe05 {
                 totalPenjualanMenu += dataPenjualan[i][j];
             }
 
-            double rataRataPerMenu = (double) totalPenjualanMenu/7;
+            double rataRataPerMenu = (double) totalPenjualanMenu/ jumlahHari;
             System.out.println("Rata-rata penjualan untuk menu ke-" + (i+1) + "adalah: " + rataRataPerMenu);
         }
     }

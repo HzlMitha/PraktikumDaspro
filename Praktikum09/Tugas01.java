@@ -34,7 +34,7 @@ public class Tugas01 {
 
             int indexMenu = -1;
             for (int j = 0; j < daftarMenu.length; j++) {
-                if (daftarMenu[j].equalsIgnoreCase(pilihanMenu)) {
+                if (pilihanMenu.equalsIgnoreCase(daftarMenu[j])) {
                     indexMenu = j;
                     break;
                 }

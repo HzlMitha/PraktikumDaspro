@@ -16,8 +16,6 @@ public class SearchNilai05 {
                 arrNilai[b] = sc05.nextInt();
         }
 
-        //int[] macamNilai = new int[arrNilai.length]; 
-
         System.out.print("Masukkan nilai yang ingin dicari : ");
         int key = sc05.nextInt();
 
