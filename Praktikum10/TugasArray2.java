@@ -2,7 +2,7 @@ package Praktikum10;
 
 import java.util.Scanner;
 
-public class KepuasanPelanggan {
+public class TugasArray2 {
     public static void main(String[] args) {
         Scanner sc05 = new Scanner(System.in);
 
